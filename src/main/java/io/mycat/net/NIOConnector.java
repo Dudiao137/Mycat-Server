@@ -75,6 +75,7 @@ public final class NIOConnector extends Thread implements SocketConnector {
 	public void run() {
 		int invalidSelectCount = 0;
 		for (;;) {
+			// 为什么放进for里面？
 			final Selector tSelector = this.selector;
 			++connectCount;
 			try {
